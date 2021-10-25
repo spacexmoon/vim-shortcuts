@@ -1,0 +1,281 @@
+VIM SHOURTCUTS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+to move up => k
+
+to move down => j
+
+to move right => l
+
+to move left => h
+
+to move to the first letter of each ward aka to move with one ward each time 
+in normal mode w
+
+to exit :q 
+
+to acess the terminal inside vim go to normal mode then type :below terminal to
+open in the botom and :terminal to open it in the head and to open in it on the
+right side :below vertical terminal
+
+to save changes :w and to save a new file with new name :w 
+then name.extintion and press enter
+
+to jump forward ctrl+i and ctrl+o for backward
+
+to do both :wq
+
+to discard changes :!
+
+to close a split or tab ctrl+w+c
+
+to exit with discarding changes :q!
+
+to delete one letter x 
+
+to undo u
+
+to redo CTRL-r
+
+to unfold block of code go to +-- and press i
+
+to fold block of code press zf then number of lines then j
+
+to add a new tab :tabnew then command
+
+to navigate the tabs :tabfisrt, :tablast and :tabnext Note plz remap them 
+
+to auto complete in commands use Tab button
+
+to indent forward and backward in visual mode only Shift+. and Shift+,
+
+to copy text y works in visual mode and to pate it p 
+also yw to copy word and yy to copy all the line note
+yy and yw work with visual mode 
+
+to past a text from another source CTRL-Shift-v
+
+to insert text anywhere you choose i 
+
+to insert text in the end of the line aka to append A
+
+to insert text after the end of the word a
+
+to select the whole line in visual mode press shift + v 
+
+to delete word dw
+
+to delete the end of the line d$
+
+to delete the last letter of the word de
+
+to delete what is after the cursor with entering insert mode automatically shift+d
+
+to delete what is before the curso with entering insert mode automatically d+shift+6 (shift+6 = ^)
+
+to indent while in insert mode ctrl+t and to undo it ctrl+d
+
+to indent while in normal mode you selct the line with shift+v (which will put you in visual mode)
+and then for forward shift+> and for backward shift+<
+
+to select 1 line and enter visual mode automatically shift+v
+
+to indent the whole file gg then = then shift+g
+
+wnatnote that d is the delete operator and w e $ are the motion of 
+the cursor for excuting the d
+ 
+so what i mean is if you 
+
+press w you will to first letter of each word and 
+
+for e you will go to last letter of each word and 
+
+for $ you will go to the end of the line directly
+
+so if you typed 2w you will go to the begining of the second word
+
+and if you typed 3e you will go to the last letter of the third word
+
+and finally if you typed 0 you will go to the begining of the line
+
+note we can also do it all to geather for example d3w
+
+to delete a whole line dd to repeat it for example 2dd
+
+to go to the begining of the page gg
+
+to go to the end of the page G
+
+to reorder the lines p for example you delete the line with dd then restore 
+it where ever you want with p
+
+to replace a character in anyword with other r then the character desiered for example rx 
+
+to delete a wrong words or letters and go to insert mode in the same time ce
+
+to delete a whole line and go to insert mode in the same time cc
+
+not that c is also used with same motions as d 
+
+for example cw  for deleting a word and enter insert mode in the same time 
+
+and c$ to delete the end of the line exactly everything after the cursor and enter 
+insert mode too in thesame time
+
+to move with specific number of lines type the number then G for example 6G
+
+to the your location in the file and file status CTRL-G note small g ro caps it does 
+not matter so use small  
+ 
+to find aka search for word / followed by what ever you want to find
+
+to search the same thing agian n
+
+to search the same phrase in the oppesite direction N
+
+to search the same phrase in the backward direction ?
+
+to go backward CTRL-O note small o or caps it does not matter so use small
+
+to go forward CTRL-I note small i or caps it does not matter so use small
+
+to find or search for () {} [] type % with cursor before one of them
+
+to change a word in a line without writing in it :s/old word/new word
+
+to change a word globaly without writing it yourself in all the code :s/old word/new word/g
+
+to change every occurrence of a character string between two lines,
+type 	:#,#s/old/new/g 	where #,# are the line numbers of the range
+				of lines where the substitution is to be done.
+type 	:%s/old/new/g 		to change every occurrence in the whole file.
+type 	:%s/old/new/gc 		to find every occurrence in the whole file,
+				with a prompt whether to substitute or not.
+
+to excute any external command :! followed by the command for example :!dir or :!ls 
+
+to remove file :!del filename or :!rm -r filename or :!rm filename
+
+to enter the visual mode and select parts of text v
+Character mode: v (lower-case)
+Line mode: V (upper-case)
+Block mode: Ctrl+v
+For (insert)visual mode: Ctrl+o+v
+
+to save part of the file v highlight the part then : and '<,"> will appear then you type w and 
+filename to save it 
+
+you can also do other things with visual mode like select text and then type d to delet it etc.
+
+to retrive text from another file and paste it in the file we in it :r filename 
+
+to retrive the output of an external command for example :r !ls or :r !dir
+
+to open a new line under the cursor and enter insert mode in the same time type o small
+
+to open a new line above the cursor and enter insert mode in the same time type O caps
+
+to replace and text aka word move the cursor on top of it and type R then the new text
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+				that lesson need further inspection really
+
+					Lesson 6.5: Set Option
+
+			** set and option so a search or substitute ignores case **
+
+1- search for 'ignore' by entering: 	/ignore <Enter>
+   repeat several times by pressing n.
+
+2- set the 'ic' (ignore case) option by entering: 	:set ic
+
+3- now search for 'ignore' again by pressing n
+   notice that Ignore and IGNORE are now also found.
+
+4- set the 'hlsearch' and 'incsearch' option: 	:set hls is
+
+5- now type the search command again and see what happens: 	/ignore <Enter>
+
+6-to disable ignoring case enter: 	:set noic 
+
+Note: to remove the highlighting of matches enter: 	:nohlsearch 
+
+Note: if you want to ignore case for just one search command, use \c
+      in the phrase: 	/ingore\c <Enter>
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+				     Lesson 7.3: COMPLETION
+
+
+	      		** Command line completion with CTRL-D and <TAB> **
+
+1. Make sure Vim is not in compatible mode:  :set nocp
+
+2. Look what files exist in the directory:  :!ls   or  :!dir
+
+3. Type the start of a command:  :e
+
+4. Press  CTRL-D  and Vim will show a list of commands that start with "e".
+
+5. Type  d<TAB>  and Vim will complete the command name to ":edit".
+
+6. Now add a space and the start of an existing file name:  :edit FIL
+
+7. Press <TAB>.  Vim will complete the name (if it is unique).
+
+NOTE:  Completion works for many commands.  Just try pressing CTRL-D and
+       <TAB>.  It is especially useful for  :help .
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+for help on anything about vim type help or f1 
+
+to jump between the 2 windows CTRL-W CTRL-W
+
+to split vim Horizentally we can use :split then filename
+
+to split vim Vertically we can use :vsplit then filename 
+
+to split vim vertically we can also use :vs then filename
+
+for more help commands for example :help w, :help c_CTRL-D, :help insert-index, :help user-manual.
+
+for vim default rc file type :r $VIMRUNTIME/vimrc_example.vim and for more information about it type
+
+:help vimrc-intro
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  This concludes the Vim Tutor.  It was intended to give a brief overview of
+  the Vim editor, just enough to allow you to use the editor fairly easily.
+  It is far from complete as Vim has many many more commands.  Read the user
+  manual next: ":help user-manual".
+
+  For further reading and studying, this book is recommended:
+	Vim - Vi Improved - by Steve Oualline
+	Publisher: New Riders
+  The first book completely dedicated to Vim.  Especially useful for beginners.
+  There are many examples and pictures.
+  See http://iccf-holland.org/click5.html
+
+  This book is older and more about Vi than Vim, but also recommended:
+	Learning the Vi Editor - by Linda Lamb
+	Publisher: O'Reilly & Associates Inc.
+  It is a good book to get to know almost anything you want to do with Vi.
+  The sixth edition also includes information on Vim.
+
+  This tutorial was written by Michael C. Pierce and Robert K. Ware,
+  Colorado School of Mines using ideas supplied by Charles Smith,
+  Colorado State University.  E-mail: bware@mines.colorado.edu.
+
+  Modified for Vim by Bram Moolenaar.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+HTML TIPS FOR WRITING THEM WITH VIM
+
+ciw in normal mode is for changing the contant between tags and entering the insert mode automatically if
+the contant is one ward if it is line then cit if it is sentence in the midle cis
+
+to open a file in edit mode we do :e then file path
