@@ -37,6 +37,8 @@ to undo u
 
 to redo CTRL-r
 
+to make use of the real folding commands add set foldmethod=syntax in the config and then press z + o to open and z + c to close
+
 to unfold block of code go to +-- and press i
 
 to fold block of code press zf then number of lines then j
